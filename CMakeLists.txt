@@ -180,7 +180,7 @@ if(PYTHONINTERP_FOUND)
 
   function(ADD_IWYU_TEST NAME FILE)
     add_test(NAME ${NAME}
-      COMMAND ${PYTHON_EXECUTABLE} run_iwyu_tests.py --run-test-file=${FILE} -- $<TARGET_FILE:include-what-you-use>
+      COMMAND ${PYTHON_EXECUTABLE} run_iwyu_tests.py --run-test-file=${FILE} -- /usr/bin/include-what-you-use
       WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
   endfunction()
 
